@@ -9,9 +9,11 @@
   <body>
     <div class="main-block">
       <img src="{{ url_for('static', filename='dscnew.png') }}" alt="Not showing">
-     <h1>Thank you for taking the DSC-RIT recruitment test 2020.</h1>
-     <h3>USN: {{usn}}</h3>
-     <h3>Your score: {{score}}</h3>
+     <h1>DSC-RIT recruitment test 2020.</h1>
+     <h3>Please chose your field of choice</h3>
+     <button><a href="{{url_for('web1')}}" class="button" type="submit">Web Development</a></button>
+     <button><a href="{{url_for('mobile1')}}" class="button" type="submit">App Development</a></button>
+     <button><a href="{{url_for('ml1')}}" class="button" type="submit">Machine Learning</a></button>
     </div>
   </body>
 </html>
