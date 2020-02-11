@@ -4,249 +4,182 @@
     <title>DSC-RIT recruitment process</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <style>
-      html, body {
-      height: 100%;
-      }
-      body, input, select { 
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
-      color: #eee;
-      }
-      h1, h3 {
-      font-weight: 400;
-      color: #000;
-      }
-      h1 {
-      font-size: 32px;
-      }
-      h3 {
-      color: #1c87c9;
-      }
-      .main-block, .info {
-      display: flex;
-      flex-direction: column;
-      }
-      .main-block {
-      justify-content: center;
-      align-items: center;
-      width: 100%; 
-      min-height: 100%;
-      background-size: cover;
-      }
-      form {
-      width: 80%; 
-      padding: 25px;
-      margin-bottom: 20px;
-      background: rgba(0, 0, 0, 0.9);
-      }
-      input, select {
-      padding: 5px;
-      margin-bottom: 20px;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid #eee;
-      }
-      input::placeholder {
-      color: #eee;
-      }
-      option {
-      background: black; 
-      border: none;
-      }
-      .metod {
-      display: flex; 
-      }
-      input[type=radio] {
-      display: none;
-      }
-      label.radio {
-      position: relative;
-      display: inline-block;
-      margin-right: 20px;
-      text-indent: 32px;
-      cursor: pointer;
-      }
-      label.radio:before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: 0;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      border: 2px solid #1c87c9;
-      }
-      label.radio:after {
-      content: "";
-      position: absolute;
-      width: 8px;
-      height: 4px;
-      top: 5px;
-      left: 5px;
-      border-bottom: 3px solid #1c87c9;
-      border-left: 3px solid #1c87c9;
-      transform: rotate(-45deg);
-      opacity: 0;
-      }
-      input[type=radio]:checked + label:after {
-      opacity: 1;
-      }
-      button {
-      display: block;
-      width: 200px;
-      padding: 10px;
-      margin: 20px auto 0;
-      border: none;
-      border-radius: 5px; 
-      background: #1c87c9; 
-      font-size: 14px;
-      font-weight: 600;
-      color: #fff;
-      }
-      button:hover {
-      background: #095484;
-      }
-      @media (min-width: 568px) {
-      .info {
-      flex-flow: row wrap;
-      justify-content: space-between;
-      }
-      input {
-      width: 46%;
-      }
-      input.fname {
-      width: 100%;
-      }
-      select {
-      width: 48%;
-      }
-      }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
-  <body>
+  <body style="background-color:black">
     <div class="main-block">
-      <h1><strong><u>DSC-RIT Recruitment Test 2020</u></strong></h1><br>
+      <h1><strong><u>DSC-RIT Recruitment Test 2020 Question Paper</u></strong></h1><br>
       <h3>Topic: Web Development</h3>
       <form action="{{url_for('web1')}}" method="POST">
         <div class="info">
-          <input class="fname" type="text" name="usn "id="usn" placeholder="USN">
+          <input class="fname" type="text" name="usn" id="usn" placeholder="Enter your USN: ">
         </div>
-        <h2>Q1: There is a div A. Inside that there is a child B. I put a style of background color green on A, and red on B. What will be the color of A and B?</h2>
+        <h2>Q1: What will be the color of DSC and Recruitment respectively?</h2><br>
+        <img src="{{ url_for('static', filename='q1.png') }}" alt="Not showing"><br>
         <div class="metod">
           <div> 
-            <input type="radio" id="radio1" name="metod7" value="A"/>
-            <label for="radio1" class="radio">A: Green B:Red</label>
+            <input type="radio" id="radio1" name="metod1" value="A"/>
+            <label for="radio1" class="radio">Green and Green </label><br><br>
          
-            <input type="radio" id="radio2" name="metod7" value="B"/>
-            <label for="radio2" class="radio">A: Red B:Green</label>
+            <input type="radio" id="radio2" name="metod1" value="B"/>
+            <label for="radio2" class="radio">Red and Green </label><br><br>
         
-            <input type="radio" id="radio3" name="metod7" value="C"/>
-            <label for="radio3" class="radio">A: Green B:Green</label>
+            <input type="radio" id="radio3" name="metod1" value="C"/>
+            <label for="radio3" class="radio">Green and Red </label><br><br>
         
-            <input type="radio" id="radio4" name="metod7" value="D"/>
-            <label for="radio4" class="radio">A: Red B:Red</label>
+            <input type="radio" id="radio4" name="metod1" value="D"/>
+            <label for="radio4" class="radio">Red and Red</label><br><br>
           </div><!--A-->
         </div><br><br>
-         <h2>Q2: Which option will you prefer for faster loading?</h2>
+         <h2>Q2: There is a div with class = A and id = B, this div has been styled, what will be the color of “I love DSC”</h2><br>
+          <img src="{{ url_for('static', filename='q2.png') }}" alt="Not showing"><br>
         <div class="metod">
           <div> 
-            <input type="radio" value="A" id="radio5" name="metod1"/>
-            <label for="radio5" class="radio">Inline styling</label>
+            <input type="radio" value="A" id="radio5" name="metod2"/>
+            <label for="radio5" class="radio">Green because green was applied after red</label><br><br>
          
-            <input type="radio" value="B" id="radio6" name="metod1" />
-            <label for="radio6" class="radio">Making a separate css file and linking it</label>
+            <input type="radio" value="B" id="radio6" name="metod2" />
+            <label for="radio6" class="radio">Red because it was applied before green</label><br><br>
         
-            <input type="radio" value="C" id="radio7" name="metod1"/>
-            <label for="radio7" class="radio">Using a style tag in header</label>
+            <input type="radio" value="C" id="radio7" name="metod2"/>
+            <label for="radio7" class="radio">Green because class has more priority over id</label><br><br>
         
-            <input type="radio" value="D" id="radio8" name="metod1" />
-            <label for="radio8" class="radio">Separate SCSS/SASS file</label>
+            <input type="radio" value="D" id="radio8" name="metod2" />
+            <label for="radio8" class="radio">Red because id has more priority over class</label><br><br>
           </div><!--B-->
         </div><br><br>
-         <h2>Q3: How do you override a predefined bootstrap component using css?</h2>
+         <h2>Q3: Which one is a good practice?</h2>
         <div class="metod">
-          <div> 
-            <input type="radio" value="A" id="radio9" name="metod2"/>
-            <label for="radio9" class="radio">Changing the inline styling in the specific tag</label>
-         
-            <input type="radio" value="B" id="radio10" name="metod2" />
-            <label for="radio10" class="radio">By making a class in the stylesheet</label>
+          <div> <br>
+          
+            <input type="radio" value="A" id="radio9" name="metod3"/>
+            <label for="radio9" class="radio">Adding Javascript in the head section.</label><br><br>
+         <br>
+         	
+            <input type="radio" value="B" id="radio10" name="metod3" />
+            <label for="radio10" class="radio">b) Adding Javascript just before the closing body tag.</label><br><br>
         
-            <input type="radio" value="C" id="radio11" name="metod2"/>
-            <label for="radio11" class="radio">Styling in the style tag</label>
+            <!--<input type="radio" value="C" id="radio11" name="metod3"/>
+            <label for="radio11" class="radio">Styling in the style tag</label><br><br>
         
-            <input type="radio" value="D" id="radio12" name="metod2" />
-            <label for="radio12" class="radio">None of these</label>
+            <input type="radio" value="D" id="radio12" name="metod3" />
+            <label for="radio12" class="radio">None of the above</label><br><br>-->
           </div>
         </div><br><br>
-         <h2>Q4: How will you reuse this snippet in different pages?</h2>
+         <h2>Q4: If you are using a framework like bootstrap as well as your own css file then in what order will you arrange them ?</h2>
         <div class="metod">
-          <div> 
-            <input type="radio" value="A" id="radio13" name="metod3"/>
-            <label for="radio13" class="radio"></label><!--<% include header>-->
-         
-            <input type="radio" value="B" id="radio14" name="metod3" />
-            <label for="radio14" class="radio">For delivery</label>
+          <div> <br>
+           <img src="{{ url_for('static', filename='q4a.png') }}" alt="Not showing"><br>
+            <input type="radio" value="A" id="radio13" name="metod4"/>
+            <label for="radio13" class="radio">style.css file before the bootstrap file</label><!--<% include header>--><br><br>
+         <br>
+         	 <img src="{{ url_for('static', filename='q4b.png') }}" alt="Not showing"><br>
+            <input type="radio" value="B" id="radio14" name="metod4" />
+            <label for="radio14" class="radio">style.css after the bootstrap file</label><br><br>
         
-            <input type="radio" value="C" id="radio15" name="metod3"/>
-            <label for="radio15" class="radio">For pick up</label>
+            <!--<input type="radio" value="C" id="radio15" name="metod4"/>
+            <label for="radio15" class="radio">For pick up</label><br><br>
         
-            <input type="radio" value="D" id="radio16" name="metod3" />
-            <label for="radio16" class="radio">For delivery</label>
+            <input type="radio" value="D" id="radio16" name="metod4" />
+            <label for="radio16" class="radio">For delivery</label><br><br>-->
           </div>
         </div>
-         <h2>Q1: How is this?</h2>
+         <h2>Q5: Which of the following is not correct?</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="A" id="radio17" name="metod4"/>
-            <label for="radio17" class="radio">For pick up</label>
+            <input type="radio" value="A" id="radio17" name="metod5"/>
+            <label for="radio17" class="radio">div is used to wrap sections of a document</label><br><br>
          
-            <input type="radio" value="B" id="radio18" name="metod4" />
-            <label for="radio18" class="radio">For delivery</label>
+            <input type="radio" value="B" id="radio18" name="metod5" />
+            <label for="radio18" class="radio">Span is used to wrap small portions of text, images, etc.</label><br><br>
         
-            <input type="radio" value="C" id="radio19" name="metod4"/>
-            <label for="radio19" class="radio">For pick up</label>
+            <input type="radio" value="C" id="radio19" name="metod5"/>
+            <label for="radio19" class="radio">Span is inline</label><br><br>
         
-            <input type="radio" value="D" id="radio20" name="metod4" />
-            <label for="radio20" class="radio">For delivery</label>
+            <input type="radio" value="D" id="radio20" name="metod5" />
+            <label for="radio20" class="radio">Div is inline</label><br><br>
           </div>
         </div>
-         <h2>Q1: How is this?</h2>
+         <h2>Q6: Which of the following is incorrect?</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="A" id="radio21" name="metod5"/>
-            <label for="radio21" class="radio">For pick up</label>
+            <input type="radio" value="A" id="radio21" name="metod6"/>
+            <label for="radio21" class="radio">Position property is preferred over margin for placing an element</label><br><br>
          
-            <input type="radio" value="B" id="radio22" name="metod5" />
-            <label for="radio22" class="radio">For delivery</label>
+            <input type="radio" value="B" id="radio22" name="metod6" />
+            <label for="radio22" class="radio">Position 'absolute' depends on the root parent element</label><br><br>
         
-            <input type="radio" value="C" id="radio23" name="metod5"/>
-            <label for="radio23" class="radio">For pick up</label>
+            <input type="radio" value="C" id="radio23" name="metod6"/>
+            <label for="radio23" class="radio">Position 'relative' places relative to the immediate parent</label><br><br>
         
-            <input type="radio" value="D" id="radio24" name="metod5" />
-            <label for="radio24" class="radio">For delivery</label>
+            <input type="radio" value="D" id="radio24" name="metod6" />
+            <label for="radio24" class="radio">Position 'relative' places relative to the browser window</label><br><br>
           </div>
         </div>
-         <h2>Q1: How is this?</h2>
+         <h2>Q7: Mark the incorrect options with respect to padding and margin?</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="A" id="radio25" name="metod6"/>
-            <label for="radio25" class="radio">For pick up</label>
+            <input type="radio" value="A" id="radio25" name="metod7"/>
+            <label for="radio25" class="radio">Padding in css deals with inner space (space between content and border)</label><br><br>
          
-            <input type="radio" value="B" id="radio26" name="metod6" />
-            <label for="radio26" class="radio">For delivery</label>
+            <input type="radio" value="B" id="radio26" name="metod7" />
+            <label for="radio26" class="radio">'margin : 0 auto' centers element horizontally</label><br><br>
         
-            <input type="radio" value="C" id="radio27" name="metod6"/>
-            <label for="radio27" class="radio">For pick up</label>
+            <input type="radio" value="C" id="radio27" name="metod7"/>
+            <label for="radio27" class="radio">'margin : 0 auto' centers element vertically</label><br><br>
         
-            <input type="radio" value="D" id="radio28" name="metod6" />
-            <label for="radio28" class="radio">For delivery</label>
+            <input type="radio" value="D" id="radio28" name="metod7" />
+            <label for="radio28" class="radio">Margin deals with outer space (space outside the element)</label><br><br>
           </div>
-        </div><br><br>
+        </div>
+        <h2>Q8: Which one of these is incorrect related to precedence in css?</h2>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="A" id="radio29" name="metod8"/>
+            <label for="radio29" class="radio">Inline css ( html style attribute ) overrides css rules in style tag and css file</label><br><br>
+         
+            <input type="radio" value="B" id="radio30" name="metod8" />
+            <label for="radio30" class="radio">A more specific selector takes precedence over a less specific one</label><br><br>
+        
+            <input type="radio" value="C" id="radio31" name="metod8"/>
+            <label for="radio31" class="radio">Rules that appear earlier in the code override later rules if both have the same specificity</label><br><br>
+        
+            <input type="radio" value="D" id="radio32" name="metod8" />
+            <label for="radio32" class="radio">A css rule with !important always takes precedence</label><br><br>
+          </div>
+        </div>
+        <h2>Q9: What do you mean by CRUD?</h2>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="A" id="radio33" name="metod9"/>
+            <label for="radio33" class="radio">Create Remove Update Destroy</label><br><br>
+         
+            <input type="radio" value="B" id="radio34" name="metod9" />
+            <label for="radio34" class="radio">Create Read Update Delete</label><br><br>
+        
+            <input type="radio" value="C" id="radio35" name="metod9"/>
+            <label for="radio35" class="radio">Create Remove Upgrade Delete</label><br><br>
+        
+            <input type="radio" value="D" id="radio36" name="metod9" />
+            <label for="radio36" class="radio">Create Read Upgrade Delete</label><br><br>
+          </div>
+        </div>
+        <h2>Q10: Which http method is used when you google search to fetch results?</h2>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="A" id="radio37" name="metod10"/>
+            <label for="radio37" class="radio">Post method</label><br><br>
+         
+            <input type="radio" value="B" id="radio38" name="metod10" /> 
+            <label for="radio38" class="radio">Put method</label><br><br>
+        
+            <input type="radio" value="C" id="radio39" name="metod10"/>
+            <label for="radio39" class="radio">Delete method</label><br><br>
+        
+            <input type="radio" value="D" id="radio40" name="metod10" />
+            <label for="radio40" class="radio">None of these</label><br><br>
+          </div>
+        </div>
         <button href="/" class="button">Submit</button>
       </form>
     </div>

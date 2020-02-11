@@ -4,251 +4,180 @@
     <title>DSC-RIT recruitment process</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <style>
-      html, body {
-      height: 100%;
-      }
-      body, input, select { 
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
-      color: #eee;
-      }
-      h1, h3 {
-      font-weight: 400;
-      color: #000;
-      }
-      h1 {
-      font-size: 32px;
-      }
-      h3 {
-      color: #1c87c9;
-      }
-      .main-block, .info {
-      display: flex;
-      flex-direction: column;
-      }
-      .main-block {
-      justify-content: center;
-      align-items: center;
-      width: 100%; 
-      min-height: 100%;
-      background-size: cover;
-      }
-      form {
-      width: 80%; 
-      padding: 25px;
-      margin-bottom: 20px;
-      background: rgba(0, 0, 0, 0.9);
-      }
-      input, select {
-      padding: 5px;
-      margin-bottom: 20px;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid #eee;
-      }
-      input::placeholder {
-      color: #eee;
-      }
-      option {
-      background: black; 
-      border: none;
-      }
-      .metod {
-      display: flex; 
-      }
-      input[type=radio] {
-      display: none;
-      }
-      label.radio {
-      position: relative;
-      display: inline-block;
-      margin-right: 20px;
-      text-indent: 32px;
-      cursor: pointer;
-      }
-      label.radio:before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: 0;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      border: 2px solid #1c87c9;
-      }
-      label.radio:after {
-      content: "";
-      position: absolute;
-      width: 8px;
-      height: 4px;
-      top: 5px;
-      left: 5px;
-      border-bottom: 3px solid #1c87c9;
-      border-left: 3px solid #1c87c9;
-      transform: rotate(-45deg);
-      opacity: 0;
-      }
-      input[type=radio]:checked + label:after {
-      opacity: 1;
-      }
-      button {
-      display: block;
-      width: 200px;
-      padding: 10px;
-      margin: 20px auto 0;
-      border: none;
-      border-radius: 5px; 
-      background: #1c87c9; 
-      font-size: 14px;
-      font-weight: 600;
-      color: #fff;
-      }
-      button:hover {
-      background: #095484;
-      }
-      @media (min-width: 568px) {
-      .info {
-      flex-flow: row wrap;
-      justify-content: space-between;
-      }
-      input {
-      width: 46%;
-      }
-      input.fname {
-      width: 100%;
-      }
-      select {
-      width: 48%;
-      }
-      }
-    </style>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
-  <body>
+  <body style="background-color:black">
     <div class="main-block">
-      <h1><strong><u>DSC-RIT Recruitment Test 2020</u></strong></h1><br>
+      <h1><strong><u>DSC-RIT Recruitment Test 2020 Question Paper</u></strong></h1><br>
       <h3>Topic: Machine Learning</h3>
-      <form action = "{{url_for('web')}}" method="POST">
+      <form action="{{url_for('web1')}}" method="POST">
         <div class="info">
-          <input class="fname" type="text" name="name" placeholder="USN">
+          <input class="fname" type="text" name="usn" id="usn" placeholder="Enter your USN: ">
         </div>
-        <h2>Q1: How is this?</h2>
+        <h2>Q1: What is PCA used for?</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="none" id="radioOne" name="metod"/>
-            <label for="radioOne" class="radio">For pick up</label><br><br>
+            <input type="radio" id="radio1" name="metod1" value="A"/>
+            <label for="radio1" class="radio">Reducing the number of features
+</label><br><br>
          
-            <input type="radio" value="none" id="radioTwo" name="metod"/>
-            <label for="radioTwo" class="radio">For delivery</label><br><br>
+            <input type="radio" id="radio2" name="metod1" value="B"/>
+            <label for="radio2" class="radio">Reducing the number of dimensions of the data</label><br><br>
         
-            <input type="radio" value="none" id="radioThree" name="metod"/>
-            <label for="radioThree" class="radio">For pick up</label><br><br>
+            <input type="radio" id="radio3" name="metod1" value="C"/>
+            <label for="radio3" class="radio">Increasing the number of features</label><br><br>
         
-            <input type="radio" value="none" id="radioFour" name="metod"/>
-            <label for="radioFour" class="radio">For delivery</label><br><br>
-          </div>
-        </div>
-        <h2>Q1: How is this?</h2>
+            <input type="radio" id="radio4" name="metod1" value="D"/>
+            <label for="radio4" class="radio">Increasing the dimensions of the data</label><br><br>
+          </div><!--A-->
+        </div><br><br>
+         <h2>Q2:What is a kernel used for?</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="none" id="radioOne" name="metod"/>
-            <label for="radioOne" class="radio">For pick up</label><br><br>
+            <input type="radio" value="A" id="radio5" name="metod2"/>
+            <label for="radio5" class="radio">Reducing the number of features</label><br><br>
          
-            <input type="radio" value="none" id="radioTwo" name="metod"/>
-            <label for="radioTwo" class="radio">For delivery</label><br><br>
+            <input type="radio" value="B" id="radio6" name="metod2" />
+            <label for="radio6" class="radio">Reducing the number of dimensions of the data</label><br><br>
         
-            <input type="radio" value="none" id="radioThree" name="metod"/>
-            <label for="radioThree" class="radio">For pick up</label><br><br>
+            <input type="radio" value="C" id="radio7" name="metod2"/>
+            <label for="radio7" class="radio">Increasing the number of features</label><br><br>
         
-            <input type="radio" value="none" id="radioFour" name="metod"/>
-            <label for="radioFour" class="radio">For delivery</label><br><br>
-          </div>
-        </div>
-        <h2>Q1: How is this?</h2>
+            <input type="radio" value="D" id="radio8" name="metod2" />
+            <label for="radio8" class="radio">Increasing the dimensions of the data</label><br><br>
+          </div><!--B-->
+        </div><br><br>
+         <h2>Q3: What is the equation of a Logistic Regression line?</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="none" id="radioOne" name="metod"/>
-            <label for="radioOne" class="radio">For pick up</label><br><br>
+            <input type="radio" value="A" id="radio9" name="metod3"/>
+            <label for="radio9" class="radio">y = log(ax + b)</label><br><br>
          
-            <input type="radio" value="none" id="radioTwo" name="metod"/>
-            <label for="radioTwo" class="radio">For delivery</label><br><br>
+            <input type="radio" value="B" id="radio10" name="metod3" />
+            <label for="radio10" class="radio">y = 1 / (1 + exp (-(ax + b)))</label><br><br>
         
-            <input type="radio" value="none" id="radioThree" name="metod"/>
-            <label for="radioThree" class="radio">For pick up</label><br><br>
+            <input type="radio" value="C" id="radio11" name="metod3"/>
+            <label for="radio11" class="radio">y = 1 + exp (-(ax + b))</label><br><br>
         
-            <input type="radio" value="none" id="radioFour" name="metod"/>
-            <label for="radioFour" class="radio">For delivery</label><br><br>
+            <input type="radio" value="D" id="radio12" name="metod3" />
+            <label for="radio12" class="radio">y = 1 / exp (-(ax + b))</label><br><br>
           </div>
-        </div>
-        <h2>Q1: How is this?</h2>
+        </div><br><br>
+         <h2>Q4: What does High Bias and Low Variance indicate?</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="none" id="radioOne" name="metod"/>
-            <label for="radioOne" class="radio">For pick up</label><br><br>
+            <input type="radio" value="A" id="radio13" name="metod4"/>
+            <label for="radio13" class="radio">Underfit</label><!--<% include header>--><br><br>
          
-            <input type="radio" value="none" id="radioTwo" name="metod"/>
-            <label for="radioTwo" class="radio">For delivery</label><br><br>
+            <input type="radio" value="B" id="radio14" name="metod4" />
+            <label for="radio14" class="radio">Overfit</label><br><br>
         
-            <input type="radio" value="none" id="radioThree" name="metod"/>
-            <label for="radioThree" class="radio">For pick up</label><br><br>
+            <input type="radio" value="C" id="radio15" name="metod4"/>
+            <label for="radio15" class="radio">Perfect fit</label><br><br>
         
-            <input type="radio" value="none" id="radioFour" name="metod"/>
-            <label for="radioFour" class="radio">For delivery</label><br><br>
+            <input type="radio" value="D" id="radio16" name="metod4" />
+            <label for="radio16" class="radio">None of the above</label><br><br>
           </div>
         </div>
-        <h2>Q1: How is this?</h2>
+         <h2>Q5: Dropout in a Neural network refers to:</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="none" id="radioOne" name="metod"/>
-            <label for="radioOne" class="radio">For pick up</label><br><br>
+            <input type="radio" value="A" id="radio17" name="metod5"/>
+            <label for="radio17" class="radio">Penalizing the weights to remove overfit</label><br><br>
          
-            <input type="radio" value="none" id="radioTwo" name="metod"/>
-            <label for="radioTwo" class="radio">For delivery</label><br><br>
+            <input type="radio" value="B" id="radio18" name="metod5" />
+            <label for="radio18" class="radio">Stop the training when optimum accuracy is achieved</label><br><br>
         
-            <input type="radio" value="none" id="radioThree" name="metod"/>
-            <label for="radioThree" class="radio">For pick up</label><br><br>
+            <input type="radio" value="C" id="radio19" name="metod5"/>
+            <label for="radio19" class="radio">Stop the training when the specified number of epochs are reached</label><br><br>
         
-            <input type="radio" value="none" id="radioFour" name="metod"/>
-            <label for="radioFour" class="radio">For delivery</label><br><br>
+            <input type="radio" value="D" id="radio20" name="metod5" />
+            <label for="radio20" class="radio">Turn off a few neurons randomly to remove overfit</label><br><br>
           </div>
         </div>
-        <h2>Q1: How is this?</h2>
+         <h2>Q6: For a healthcare job-critical scenario,</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="none" id="radioOne" name="metod"/>
-            <label for="radioOne" class="radio">For pick up</label><br><br>
+            <input type="radio" value="A" id="radio21" name="metod6"/>
+            <label for="radio21" class="radio">Precision is of highest priority</label><br><br>
          
-            <input type="radio" value="none" id="radioTwo" name="metod"/>
-            <label for="radioTwo" class="radio">For delivery</label><br><br>
+            <input type="radio" value="B" id="radio22" name="metod6" />
+            <label for="radio22" class="radio">F1 score is of highest priority</label><br><br>
         
-            <input type="radio" value="none" id="radioThree" name="metod"/>
-            <label for="radioThree" class="radio">For pick up</label><br><br>
+            <input type="radio" value="C" id="radio23" name="metod6"/>
+            <label for="radio23" class="radio">Recall is of highest priority</label><br><br>
         
-            <input type="radio" value="none" id="radioFour" name="metod"/>
-            <label for="radioFour" class="radio">For delivery</label><br><br>
+            <input type="radio" value="D" id="radio24" name="metod6" />
+            <label for="radio24" class="radio">Accuracy is of highest priority</label><br><br>
           </div>
         </div>
-        <h2>Q1: How is this?</h2>
+         <h2>Q7: When the algorithm reaches close to global minima<br>Statement X: Its learning rate decreases in Adam<br>
+Statement Y: Its learning decreases in Stochastic Gradient Descent
+</h2>
         <div class="metod">
           <div> 
-            <input type="radio" value="none" id="radioOne" name="metod"/>
-            <label for="radioOne" class="radio">For pick up</label><br><br>
+            <input type="radio" value="A" id="radio25" name="metod7"/>
+            <label for="radio25" class="radio">X is true, Y is false</label><br><br>
          
-            <input type="radio" value="none" id="radioTwo" name="metod"/>
-            <label for="radioTwo" class="radio">For delivery</label><br><br>
+            <input type="radio" value="B" id="radio26" name="metod7" />
+            <label for="radio26" class="radio">X is false, Y is false</label><br><br>
         
-            <input type="radio" value="none" id="radioThree" name="metod"/>
-            <label for="radioThree" class="radio">For pick up</label><br><br>
+            <input type="radio" value="C" id="radio27" name="metod7"/>
+            <label for="radio27" class="radio">X is false, Y is true</label><br><br>
         
-            <input type="radio" value="none" id="radioFour" name="metod"/>
-            <label for="radioFour" class="radio">For delivery</label><br><br>
+            <input type="radio" value="D" id="radio28" name="metod7" />
+            <label for="radio28" class="radio">X is true, Y is true</label><br><br>
           </div>
         </div>
-        <br><br>
-        <button class="button" type="submit">Submit</button>
+        <h2>Q8: What is a good test size: train size ratio?</h2>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="A" id="radio29" name="metod8"/>
+            <label for="radio29" class="radio">0.5</label><br><br>
+         
+            <input type="radio" value="B" id="radio30" name="metod8" />
+            <label for="radio30" class="radio">0.7</label><br><br>
+        
+            <input type="radio" value="C" id="radio31" name="metod8"/>
+            <label for="radio31" class="radio">0.05</label><br><br>
+        
+            <input type="radio" value="D" id="radio32" name="metod8" />
+            <label for="radio32" class="radio">0.25</label><br><br>
+          </div>
+        </div>
+        <h2>Q9: What is an Eigenvector?</h2>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="A" id="radio33" name="metod9"/>
+            <label for="radio33" class="radio">A vector which is not transformed by a Linear Matrix transformation</label><br><br>
+         
+            <input type="radio" value="B" id="radio34" name="metod9" />
+            <label for="radio34" class="radio">A vector which is scaled by a scalar but not rotated by a Linear Matrix Transformation</label><br><br>
+        
+            <input type="radio" value="C" id="radio35" name="metod9"/>
+            <label for="radio35" class="radio">A vector which is not scaled but only rotated by a Linear matrix transformation</label><br><br>
+        
+            <input type="radio" value="D" id="radio36" name="metod9" />
+            <label for="radio36" class="radio">None of the above</label><br><br>
+          </div>
+        </div>
+        <h2>Q10: How is ML different from DL?</h2>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="A" id="radio37" name="metod10"/>
+            <label for="radio37" class="radio">Deep learning only includes neural networks</label><br><br>
+         
+            <input type="radio" value="B" id="radio38" name="metod10" /> 
+            <label for="radio38" class="radio">Deep learning models choose their features to learn from while ML models need to be fed the features</label><br><br>
+        
+            <input type="radio" value="C" id="radio39" name="metod10"/>
+            <label for="radio39" class="radio">ML models use simple linear functions while DL models leverage non-linearity</label><br><br>
+        
+            <input type="radio" value="D" id="radio40" name="metod10" />
+            <label for="radio40" class="radio">None of the above</label><br><br>
+          </div>
+        </div>
+        <button href="/" class="button">Submit</button>
       </form>
     </div>
   </body>

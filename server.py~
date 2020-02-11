@@ -59,12 +59,12 @@ def mobile1():
 			  request.form['metod7'] + "\n" + request.form['metod8'] + "\n" + request.form['metod9'] + "\n" +
 			  request.form['metod10'])
 		f = open("resultsmobile.txt", "a")
-		scr = 0
+		scr2 = 0
 		l1 = ["B", "D", "B", "A", "A", "C", "C", "B", "B", "B"]
 		for i in range(0, 10):
 			if l1[i] == request.form['metod' + str(i + 1)]:
-				scr = scr + 1
-		f.write(request.form['usn'] + "\t" + str(scr) + "\n")
+				scr2 = scr2 + 1
+		f.write(request.form['usn'] + "\t" + str(scr2) + "\n")
 		f.close()
 		return render_template("success.html", score=str(scr), usn=request.form['usn'])
 
