@@ -1,6 +1,6 @@
-# dsctest
+# DSC-RIT_Recruitment_Test
 
-dsctest is a repo containing all the code that was used to conduct DSC-RIT recruitment tests.
+DSC-RIT_Recruitment_Test is a repo containing all the code that was used to conduct the DSC-RIT recruitment tests.
 
 ## Installation
 
