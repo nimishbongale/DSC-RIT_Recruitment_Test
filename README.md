@@ -1,6 +1,8 @@
 # DSC-RIT_Recruitment_Test
 
-![not showing](https://raw.githubusercontent.com/nimishbongale/DSC-RIT_Recruitment_Test/master/static/dscnew.png?token=AKLHGWOKT4B6YUSLBUNLU526NEMIS)
+<p align="center">
+<img src="https://raw.githubusercontent.com/nimishbongale/DSC-RIT_Recruitment_Test/master/static/dscnew.png?token=AKLHGWOKT4B6YUSLBUNLU526NEMIS">
+</p>
 
 DSC-RIT_Recruitment_Test is a repo containing all the code that was used to conduct the DSC-RIT recruitment tests.
 
