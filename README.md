@@ -6,6 +6,8 @@
 
 DSC-RIT_Recruitment_Test is a repo containing all the code that was used to conduct the DSC-RIT recruitment tests.
 
+[![Run on Repl.it](https://repl.it/badge/github/nimishbongale/DSC-RIT_Recruitment_Test)](https://repl.it/github/nimishbongale/DSC-RIT_Recruitment_Test)
+
 ## Installation
 
 Use git or download zip.
